@@ -5,3 +5,7 @@
 </p>
 
 ## Introduction
+
+next-prime is an opinionated collection of components, hooks, and utils for your next Next.js project.
+
+Created by: Tim Twiest ([@timtwiest](https://timtwiest.nl))
