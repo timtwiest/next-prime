@@ -4,6 +4,12 @@
   Your favourite building blocks for your Next.js projects.
 </p>
 
+<!-- TOC -->
+
+* [Introduction](#introduction)
+
+<!-- TOC -->
+
 ## Introduction
 
 next-prime is an opinionated collection of components, hooks, and utils for your next Next.js project.
