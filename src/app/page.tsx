@@ -12,7 +12,7 @@ const metadata = {
 
 function HomePage() {
   return (
-    <div className="relative z-0 flex min-h-screen flex-col items-center justify-center overflow-hidden bg-white">
+    <div className="relative z-0 flex min-h-screen flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-50 via-white to-red-200">
       <h1 className="mt-8 bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
         {metadata.title}
       </h1>
