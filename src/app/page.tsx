@@ -19,9 +19,14 @@ function HomePage() {
       <Text className="mt-3.5 max-w-sm text-center text-sm text-gray-500 md:text-lg">
         {metadata.description}
       </Text>
-      <Card>
-        <Card.Header>Card Header</Card.Header>
-        <Card.Body>Card Body</Card.Body>
+      <Card className="transform transition duration-500 hover:scale-105">
+        <Card.Header className="font-display justify-center bg-gradient-to-br from-black to-stone-500 bg-clip-text text-xl font-bold text-transparent md:text-2xl">
+          Try the components
+        </Card.Header>
+        <Card.Body>
+          <Text>Unleash the Beauty with our Pre-built Components</Text>
+          <Text className="text-center italic">coming soon</Text>
+        </Card.Body>
       </Card>
     </div>
   );
