@@ -19,15 +19,30 @@ function HomePage() {
       <Text className="mt-3.5 max-w-sm text-center text-sm text-gray-500 md:text-lg">
         {metadata.description}
       </Text>
-      <Card className="transform transition duration-500 hover:scale-105">
-        <Card.Header className="font-display justify-center bg-gradient-to-br from-black to-stone-500 bg-clip-text text-xl font-bold text-transparent md:text-2xl">
-          Try the components
-        </Card.Header>
-        <Card.Body>
-          <Text>Unleash the Beauty with our Pre-built Components</Text>
-          <Text className="text-center italic">coming soon</Text>
-        </Card.Body>
-      </Card>
+      <div className="my-10 grid w-full max-w-screen-md grid-cols-1 gap-5 px-5 md:grid-cols-2 xl:px-0">
+        <Card className="transform transition duration-500 hover:scale-105">
+          <Card.Header className="font-display justify-center bg-gradient-to-br from-black to-stone-500 bg-clip-text text-xl font-bold text-transparent md:text-2xl">
+            Try the components
+          </Card.Header>
+          <Card.Body>
+            <Text className="text-center">
+              Unleash the Beauty with our Pre-built Components
+            </Text>
+            <Text className="text-center italic">coming soon</Text>
+          </Card.Body>
+        </Card>
+        <Card className="transform transition duration-500 hover:scale-105">
+          <Card.Header className="font-display justify-center bg-gradient-to-br from-black to-stone-500 bg-clip-text text-xl font-bold text-transparent md:text-2xl">
+            Try the Hooks & Utils
+          </Card.Header>
+          <Card.Body>
+            <Text className="text-center">
+              Empower Your Development with Our Handy Hooks and Utilities
+            </Text>
+            <Text className="text-center italic">coming soon</Text>
+          </Card.Body>
+        </Card>
+      </div>
     </div>
   );
 }
