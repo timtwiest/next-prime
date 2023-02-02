@@ -11,16 +11,23 @@ const metadata = {
     'An opinionated collection of components, hooks, and utils for your next Next.js project.',
 };
 
+const hooks: string[] = [
+  'useClickOutside',
+  'useKeyPress',
+  'useLocalStorage',
+  'getReadableTimeString',
+];
+
 const cards: {
   title: string;
   description: string;
   large: boolean;
-  component: React.ReactElement;
+  component: React.ReactElement | null;
 }[] = [
   {
     title: 'Try the components',
     description: 'Unleash the Beauty with our Pre-built Components',
-    large: false,
+    large: true,
     component: (
       <Text className="pt-3 text-center font-mono italic">coming soon</Text>
     ),
@@ -28,24 +35,12 @@ const cards: {
   {
     title: 'Try the Hooks & Utils',
     description: 'Empower Your Development with Our Handy Hooks and Utilities',
-    large: true,
+    large: false,
     component: (
-      <div className="grid grid-flow-col grid-rows-3 gap-5 pt-5">
-        <Text as={'span'} className=" font-semibold">
-          useClickOutside
-        </Text>
-        <Text as={'span'} className="font-semibold">
-          useKeyPress
-        </Text>
-        <Text as={'span'} className="font-semibold">
-          getReadableTimeString
-        </Text>
-        <Text as={'span'} className="font-semibold">
-          capitalize
-        </Text>
-        <Text as={'span'} className="font-semibold">
-          truncate
-        </Text>
+      <div className="mt-3 flex flex-col justify-center text-center">
+        {hooks.map((element, i) => (
+          <Text key={`key-${element}-i-${i}`}>{element}</Text>
+        ))}
       </div>
     ),
   },
@@ -60,15 +55,12 @@ function HomePage() {
       <Text className="mt-3.5 max-w-sm text-center text-sm text-gray-500 sm:text-lg">
         {metadata.description}
       </Text>
-      <div className="my-10 grid w-full max-w-screen-md grid-cols-1 gap-5 px-5 sm:grid-cols-3 xl:px-0">
+      <div className="my-10 grid w-full max-w-screen-md grid-cols-1 gap-5 px-5 sm:grid-cols-2 xl:px-0">
         {cards.map(({ title, description, large, component }, i) => (
           <Card
             key={`card-${title}-i-${i}`}
             className={classnames(
               'transform transition duration-500 hover:scale-105',
-              {
-                'col-span-2': large,
-              },
             )}
           >
             <Card.Header className="font-display justify-center bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center text-lg font-bold text-transparent sm:text-xl">
