@@ -15,6 +15,7 @@ export default function Button({
   style,
   variant = 'default',
   size = 'md',
+  ...props
 }: IProps) {
   const variantStyles = {
     default: 'bg-slate-900 text-white',
@@ -40,7 +41,12 @@ export default function Button({
   );
 
   return (
-    <button data-variant={variant} style={style} className={newClassNames}>
+    <button
+      {...props}
+      data-variant={variant}
+      style={style}
+      className={newClassNames}
+    >
       {children}
     </button>
   );
